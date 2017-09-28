@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 231023199}
   m_Layer: 0
   m_Name: TopPlatform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 1365053265}
   - component: {fileID: 1365053264}
   - component: {fileID: 1365053268}
+  - component: {fileID: 1365053269}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -444,6 +445,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1365053269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1365053263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e71951c1814a87e46b99ac1183a9cdf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  jumpHeight: 5
 --- !u!1 &1403279894
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,7 +471,7 @@ GameObject:
   - component: {fileID: 1403279896}
   m_Layer: 0
   m_Name: BottomPlatform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -540,6 +554,7 @@ GameObject:
   - component: {fileID: 1481392740}
   - component: {fileID: 1481392739}
   - component: {fileID: 1481392738}
+  - component: {fileID: 1481392743}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -575,7 +590,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9473e25da993b8b40a412ef427951a0c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -626,3 +641,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1481392743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1481392737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b48a89dc824899489a7291cf579e555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  jumpHeight: 5
