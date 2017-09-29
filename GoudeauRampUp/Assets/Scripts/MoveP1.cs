@@ -8,7 +8,7 @@ public class MoveP1 : MonoBehaviour
     [SerializeField]
     private float speed = 5;
     [SerializeField]
-    private float jumpHeight = 5;
+    private float jumpHeight = 250;
 
     private Rigidbody rb;
     private bool isGrounded;

@@ -8,7 +8,7 @@ public class MoveP2 : MonoBehaviour
     [SerializeField]
     private float speed = 5;
     [SerializeField]
-    private float jumpHeight = 5;
+    private float jumpHeight = 250;
 
     private Rigidbody rb;
     private bool isGrounded;
@@ -32,7 +32,7 @@ public class MoveP2 : MonoBehaviour
 
         rb.AddForce(movement * speed);
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
+        if (Input.GetKeyDown(KeyCode.RightControl) && isGrounded == true)
         {
             rb.AddForce(Vector3.up * jumpHeight);
             isGrounded = false;
