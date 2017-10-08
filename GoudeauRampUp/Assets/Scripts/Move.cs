@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveP2 : MonoBehaviour
+public class Move : MonoBehaviour
 {
     [SerializeField]
     private float speed = 5f;
     [SerializeField]
     private float jumpHeight = 250f;
+    [SerializeField]
+    protected string horizontalAxis;
+    [SerializeField]
+    protected string verticalAxis;
+    [SerializeField]
+    private KeyCode jump;
 
     private Rigidbody rb;
     private bool isGrounded;
-
-    protected string horizontalAxis = "Horizontal2";
-    protected string verticalAxis = "Vertical2";
 
     void OnCollisionEnter(Collision other)
     {
@@ -25,7 +28,7 @@ public class MoveP2 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         isGrounded = true;
-    }
+	}
 
     void FixedUpdate()
     {
@@ -33,7 +36,7 @@ public class MoveP2 : MonoBehaviour
 
         rb.AddForce(movement * speed);
 
-        if (Input.GetKeyDown(KeyCode.RightControl) && isGrounded)
+        if (Input.GetKeyDown(jump) && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpHeight);
             isGrounded = false;
