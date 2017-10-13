@@ -28,7 +28,7 @@ public class Move : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         isGrounded = true;
-	}
+    }
 
     void FixedUpdate()
     {
